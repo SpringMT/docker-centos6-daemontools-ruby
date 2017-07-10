@@ -1,13 +1,12 @@
 ## how to build
 
 ```sh
-docker build --rm -t centos-build .
+docker build --rm -t docker-centos6-daemontools-ruby .
 ```
 
 ## running
 
 ```sh
-docker run -it --rm drecom/centos-base /bin/bash
+docker run -it --rm springmt/docker-centos6-daemontools-ruby /bin/bash
 ```
-
 
