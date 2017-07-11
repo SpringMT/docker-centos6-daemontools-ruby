@@ -10,6 +10,8 @@ MAINTAINER Spring_MT
 
 RUN yum install -y \
     epel-release \
+    openssl \
+    ca-certificates \
     openssl-devel \
     readline-devel\
     zlib-devel \
