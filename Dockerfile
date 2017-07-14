@@ -9,6 +9,8 @@ MAINTAINER Spring_MT
 #RUN rpm -ivh http://ftp.iij.ad.jp/pub/linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
 RUN yum install -y \
+    zip \
+    unzip \
     epel-release \
     openssl \
     ca-certificates \
