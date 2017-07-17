@@ -25,8 +25,6 @@ RUN yum install -y \
     ImageMagick \
     ImageMagick-devel \
     libffi-devel \
-    mysql \
-    mysql-devel \
     libxslt-devel \
     redis \
     python \
