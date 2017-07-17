@@ -6,7 +6,7 @@ FROM     centos:centos6
 
 MAINTAINER Spring_MT
 
-#RUN rpm -ivh http://ftp.iij.ad.jp/pub/linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
+ENV MYSQL_RPM_VERSION mysql-community-release-el6-5.noarch.rpm
 
 RUN yum install -y \
     zip \
@@ -50,6 +50,10 @@ RUN mkdir -p /package && chmod 1755 /package && cd /package \
 && echo 'gcc -O2 -Wimplicit -Wunused -Wcomment -Wchar-subscripts -Wuninitialized -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings --include /usr/include/errno.h' > src/conf-cc \
 && package/install \
 && mkdir -p /service && chmod 1755 /service
+
+# mysql
+RUN yum install -y http://repo.mysql.com/mysql-community-release-el5-5.noarch.rpm
+RUN yum install -y mysql-community-server mysql-community-devel mysql-community-client
 
 # rbenv and ruby
 RUN git clone git://github.com/rbenv/rbenv.git /usr/local/rbenv \
